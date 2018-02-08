@@ -29,13 +29,13 @@ class PluginMigrationTest < Rails::Generators::TestCase
     assert_migration('../test_plugin2/db/migrate/test_migration.test_plugin.rb')
   end
 
-  # While debugging, make sure to override #capture method, otherwise it will
-  # "steal" your debugger session
-  def capture(out)
-    if out == :stdout
-      yield
-    else
-      super
-    end
-  end
+  # # While debugging, make sure to override #capture method, otherwise it will
+  # # "steal" your debugger session
+  # def capture(out)
+  #   if out == :stdout
+  #     yield
+  #   else
+  #     super
+  #   end
+  # end
 end
