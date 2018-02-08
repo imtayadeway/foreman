@@ -67,7 +67,7 @@ class RendererTest < ActiveSupport::TestCase
 
   test '#default_url_options is overriden only if it is not defined' do
     renderer = RendererWithOwnDefaultUrlOptions.new
-    url = renderer.url_for :only_path => false, :controller => 'hosts', :action => 'index'
+    url = renderer.url_for :ignore_query => false, :controller => 'hosts', :action => 'index'
     assert_includes url, 'example.com'
   end
 

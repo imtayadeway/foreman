@@ -18,7 +18,7 @@ module Foreman::Controller::ProvisioningTemplates
     port     = uri.port
     protocol = uri.scheme
 
-    url_for(:only_path => false, :action => :hostgroup_template, :controller => '/unattended',
+    url_for(:ignore_query => false, :action => :hostgroup_template, :controller => '/unattended',
             :id => template.name, :hostgroup => hostgroup.title, :protocol => protocol,
             :host => host, :port => port)
   end
